@@ -87,11 +87,10 @@ $data = array(
         'module' => 'taxonomy',
       ),
       'teaser' => array(
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
         'label' => 'above',
+        'type' => 'hidden',
+        'weight' => '10',
         'settings' => array(),
-        'module' => 'taxonomy',
       ),
     ),
     'settings' => array(

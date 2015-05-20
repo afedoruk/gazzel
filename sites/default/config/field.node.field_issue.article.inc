@@ -101,10 +101,10 @@ $data = array(
         'weight' => 12,
       ),
       'teaser' => array(
-        'type' => 'hidden',
         'label' => 'above',
+        'type' => 'hidden',
+        'weight' => '0',
         'settings' => array(),
-        'weight' => 0,
       ),
     ),
     'required' => 1,

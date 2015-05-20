@@ -128,10 +128,14 @@ $data = array(
         'weight' => 11,
       ),
       'teaser' => array(
-        'type' => 'hidden',
-        'label' => 'above',
-        'settings' => array(),
-        'weight' => 0,
+        'label' => 'hidden',
+        'type' => 'image',
+        'weight' => '0',
+        'settings' => array(
+          'image_style' => '',
+          'image_link' => 'content',
+        ),
+        'module' => 'image',
       ),
     ),
     'required' => 0,

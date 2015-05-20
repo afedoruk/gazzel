@@ -17,13 +17,14 @@ $data = (object) array(
 );
 
 $dependencies = array(
+  'variable.field_bundle_settings_node__issue' => 'variable.field_bundle_settings_node__issue',
   'variable.node_options_issue' => 'variable.node_options_issue',
   'variable.node_preview_issue' => 'variable.node_preview_issue',
   'variable.node_submitted_issue' => 'variable.node_submitted_issue',
 );
 
 $optional = array(
-  'field.node.body.issue' => 'field.node.body.issue',
+  'field.node.field_image.issue' => 'field.node.field_image.issue',
   'permission.create_issue_content' => 'permission.create_issue_content',
   'permission.edit_own_issue_content' => 'permission.edit_own_issue_content',
   'permission.edit_any_issue_content' => 'permission.edit_any_issue_content',

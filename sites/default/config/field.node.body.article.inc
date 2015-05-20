@@ -101,12 +101,9 @@ $data = array(
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'type' => 'text_summary_or_trimmed',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'module' => 'text',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => '0',
+        'settings' => array(),
       ),
     ),
     'required' => FALSE,

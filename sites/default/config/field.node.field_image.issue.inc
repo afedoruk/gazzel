@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * field.node.field_image.article.inc
+ * field.node.field_image.issue.inc
  */
 
 $api = '2.0.0';
@@ -94,57 +94,57 @@ $data = array(
     ),
   ),
   'field_instance' => array(
-    'label' => 'Image',
-    'description' => 'Upload an image to go with this article.',
-    'required' => FALSE,
-    'settings' => array(
-      'file_directory' => 'field/image',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'alt_field' => TRUE,
-      'title_field' => '',
-      'default_image' => 0,
-      'user_register_form' => FALSE,
-    ),
+    'label' => 'Фон',
     'widget' => array(
+      'weight' => '-3',
       'type' => 'image_image',
+      'module' => 'image',
+      'active' => 1,
       'settings' => array(
         'progress_indicator' => 'throbber',
         'preview_image_style' => 'thumbnail',
       ),
-      'weight' => '5',
-      'module' => 'image',
+    ),
+    'settings' => array(
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'alt_field' => 0,
+      'title_field' => 0,
+      'default_image' => 0,
+      'user_register_form' => FALSE,
     ),
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'type' => 'image',
         'settings' => array(
-          'image_style' => 'large',
+          'image_style' => '',
           'image_link' => '',
         ),
-        'weight' => -1,
         'module' => 'image',
+        'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
         'type' => 'hidden',
-        'weight' => '-1',
+        'label' => 'above',
         'settings' => array(),
+        'weight' => 0,
       ),
     ),
+    'required' => 0,
+    'description' => '',
     'field_name' => 'field_image',
     'entity_type' => 'node',
-    'bundle' => 'article',
+    'bundle' => 'issue',
     'deleted' => '0',
   ),
 );
 
 $dependencies = array(
-  'content_type.article' => 'content_type.article',
-  'image_style.large' => 'image_style.large',
+  'content_type.issue' => 'content_type.issue',
 );
 
 $optional = array();
