@@ -587,7 +587,7 @@ table {
 
 /* line 10, ../sass/layouts/_responsive.scss */
 .view-id-issue_view {
-  max-width: 1200px;
+  text-align: center;
 }
 /* line 45, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .view-id-issue_view:before, .view-id-issue_view:after {
@@ -1583,5 +1583,9 @@ tr.selected td {
   }
 }
 /* SMACSS theme rules */
-/* @import "theme-A"; */
+/* line 1, ../sass/_gazzel.scss */
+#logo {
+  max-width: 1200px;
+}
+
 /* @import "theme-B"; */
