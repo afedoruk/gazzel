@@ -95,9 +95,9 @@ $data = array(
       'default' => array(
         'label' => 'hidden',
         'type' => 'text_default',
+        'weight' => '0',
         'settings' => array(),
         'module' => 'text',
-        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',

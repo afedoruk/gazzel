@@ -1,18 +1,15 @@
 <?php
 /**
  * @file
- * field.node.field_image.article.inc
+ * field.node.field_title_image.issue.inc
  */
 
 $api = '2.0.0';
 
 $data = array(
   'field_config' => array(
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
+    'translatable' => '0',
+    'entity_types' => array(),
     'settings' => array(
       'uri_scheme' => 'public',
       'default_image' => 0,
@@ -25,28 +22,26 @@ $data = array(
       'details' => array(
         'sql' => array(
           'FIELD_LOAD_CURRENT' => array(
-            'field_data_field_image' => array(
-              'fid' => 'field_image_fid',
-              'alt' => 'field_image_alt',
-              'title' => 'field_image_title',
-              'width' => 'field_image_width',
-              'height' => 'field_image_height',
+            'field_data_field_title_image' => array(
+              'fid' => 'field_title_image_fid',
+              'alt' => 'field_title_image_alt',
+              'title' => 'field_title_image_title',
+              'width' => 'field_title_image_width',
+              'height' => 'field_title_image_height',
             ),
           ),
           'FIELD_LOAD_REVISION' => array(
-            'field_revision_field_image' => array(
-              'fid' => 'field_image_fid',
-              'alt' => 'field_image_alt',
-              'title' => 'field_image_title',
-              'width' => 'field_image_width',
-              'height' => 'field_image_height',
+            'field_revision_field_title_image' => array(
+              'fid' => 'field_title_image_fid',
+              'alt' => 'field_title_image_alt',
+              'title' => 'field_title_image_title',
+              'width' => 'field_title_image_width',
+              'height' => 'field_title_image_height',
             ),
           ),
         ),
       ),
     ),
-    'entity_types' => array(),
-    'translatable' => '0',
     'foreign keys' => array(
       'fid' => array(
         'table' => 'file_managed',
@@ -55,7 +50,12 @@ $data = array(
         ),
       ),
     ),
-    'field_name' => 'field_image',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'field_name' => 'field_title_image',
     'type' => 'image',
     'module' => 'image',
     'active' => '1',
@@ -94,57 +94,53 @@ $data = array(
     ),
   ),
   'field_instance' => array(
-    'label' => 'Image',
-    'description' => 'Upload an image to go with this article.',
-    'required' => FALSE,
-    'settings' => array(
-      'file_directory' => 'field/image',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'alt_field' => TRUE,
-      'title_field' => '',
-      'default_image' => 0,
-      'user_register_form' => FALSE,
-    ),
+    'label' => 'Title image',
     'widget' => array(
+      'weight' => '-1',
       'type' => 'image_image',
+      'module' => 'image',
+      'active' => 1,
       'settings' => array(
         'progress_indicator' => 'throbber',
         'preview_image_style' => 'thumbnail',
       ),
-      'weight' => '5',
-      'module' => 'image',
+    ),
+    'settings' => array(
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'alt_field' => 0,
+      'title_field' => 0,
+      'default_image' => 0,
+      'user_register_form' => FALSE,
     ),
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
-        'type' => 'image',
-        'weight' => '-1',
-        'settings' => array(
-          'image_style' => 'large',
-          'image_link' => '',
-        ),
-        'module' => 'image',
+        'label' => 'above',
+        'type' => 'hidden',
+        'weight' => '1',
+        'settings' => array(),
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'type' => 'hidden',
-        'weight' => '-1',
+        'weight' => '0',
         'settings' => array(),
       ),
     ),
-    'field_name' => 'field_image',
+    'required' => 0,
+    'description' => '',
+    'field_name' => 'field_title_image',
     'entity_type' => 'node',
-    'bundle' => 'article',
+    'bundle' => 'issue',
     'deleted' => '0',
   ),
 );
 
 $dependencies = array(
-  'content_type.article' => 'content_type.article',
-  'image_style.large' => 'image_style.large',
+  'content_type.issue' => 'content_type.issue',
 );
 
 $optional = array();

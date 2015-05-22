@@ -119,13 +119,9 @@ $data = array(
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'type' => 'image',
-        'settings' => array(
-          'image_style' => '',
-          'image_link' => '',
-        ),
-        'module' => 'image',
-        'weight' => 11,
+        'type' => 'hidden',
+        'weight' => '11',
+        'settings' => array(),
       ),
       'teaser' => array(
         'label' => 'hidden',

@@ -25,6 +25,7 @@ $dependencies = array(
 
 $optional = array(
   'field.node.field_image.issue' => 'field.node.field_image.issue',
+  'field.node.field_title_image.issue' => 'field.node.field_title_image.issue',
   'permission.create_issue_content' => 'permission.create_issue_content',
   'permission.edit_own_issue_content' => 'permission.edit_own_issue_content',
   'permission.edit_any_issue_content' => 'permission.edit_any_issue_content',

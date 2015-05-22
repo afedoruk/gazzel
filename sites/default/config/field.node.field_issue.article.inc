@@ -94,11 +94,11 @@ $data = array(
       'default' => array(
         'label' => 'above',
         'type' => 'entityreference_label',
+        'weight' => '12',
         'settings' => array(
           'link' => FALSE,
         ),
         'module' => 'entityreference',
-        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',

@@ -80,9 +80,9 @@ $data = array(
     ),
     'display' => array(
       'default' => array(
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
         'label' => 'above',
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => '10',
         'settings' => array(),
         'module' => 'taxonomy',
       ),
