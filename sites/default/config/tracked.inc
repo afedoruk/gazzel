@@ -12,6 +12,7 @@ $tracked = array (
   'field.node.field_tags.article' => '4c5424b355c4ae3263251b746a19bed937990d40',
   'field.node.field_title_image.article' => 'd88e9264df9baf6d5ea3f1de5a1383eeeb73fc75',
   'field.node.field_title_image.issue' => '0c7d2d7afb1adfec6841ae6025aa85098ea870f7',
+  'image_style.issue_title' => '9839820d61af37cbe8a9012914cac7521df4e15a',
   'image_style.large' => 'a3f59d236f134cbb5636e87369dbeb6731ca1dde',
   'image_style.medium' => '3de6edea4dcbba5a8a466d3adb3be605e7048879',
   'variable.admin_theme' => '2e915421a9288f745eed1287a4da763582efb92e',

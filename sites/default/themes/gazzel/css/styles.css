@@ -1588,4 +1588,9 @@ tr.selected td {
   max-width: 1200px;
 }
 
+/* line 5, ../sass/_gazzel.scss */
+#issue-title {
+  text-align: center;
+}
+
 /* @import "theme-B"; */
