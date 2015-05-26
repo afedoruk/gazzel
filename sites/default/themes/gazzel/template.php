@@ -56,7 +56,10 @@ function gazzel_preprocess_html(&$variables, $hook) {
 function gazzel_preprocess_page(&$variables, $hook) {
   if(isset($variables['node']) && $variables['node']->type=='issue') {
     if($variables['node']->field_title_image['und'][0]['uri']) {
-      $variables['title_image'] = image_style_url("issue_title", $variables['node']->field_title_image['und'][0]['uri']);
+      $variables['issue_title_image'] = image_style_url("issue_title", $variables['node']->field_title_image['und'][0]['uri']);
+    }
+    if($variables['node']->field_image['und'][0]['uri']) {
+      $variables['issue_background_image'] = image_style_url("issue_background", $variables['node']->field_image['und'][0]['uri']);
     }
   }
 }

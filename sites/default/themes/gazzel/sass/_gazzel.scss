@@ -1,5 +1,14 @@
-#logo {
-  max-width: $gazzel-max-width;
+#header {  
+  text-align: center;
+  padding: $gazzel-logo-padding;
+}
+
+.header__logo {
+  float: none;
+}
+
+.header__logo img {
+  max-width: $gazzel-logo-max-width;
 }
 
 #issue-title {

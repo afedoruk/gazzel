@@ -582,7 +582,7 @@ table {
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 /* line 10, ../sass/layouts/_responsive.scss */
@@ -1584,11 +1584,22 @@ tr.selected td {
 }
 /* SMACSS theme rules */
 /* line 1, ../sass/_gazzel.scss */
-#logo {
+#header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* line 6, ../sass/_gazzel.scss */
+.header__logo {
+  float: none;
+}
+
+/* line 10, ../sass/_gazzel.scss */
+.header__logo img {
   max-width: 1200px;
 }
 
-/* line 5, ../sass/_gazzel.scss */
+/* line 14, ../sass/_gazzel.scss */
 #issue-title {
   text-align: center;
 }
