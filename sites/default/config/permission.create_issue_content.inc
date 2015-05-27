@@ -8,7 +8,9 @@ $api = '2.0.0';
 
 $data = array(
   'permission' => 'create issue content',
-  'roles' => array(),
+  'roles' => array(
+    0 => 'editor',
+  ),
 );
 
 $dependencies = array(

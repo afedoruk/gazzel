@@ -10,6 +10,7 @@ $data = array(
   'permission' => 'delete any article content',
   'roles' => array(
     0 => 'administrator',
+    1 => 'editor',
   ),
 );
 
