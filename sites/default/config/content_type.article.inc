@@ -18,6 +18,9 @@ $data = (object) array(
 
 $dependencies = array(
   'variable.field_bundle_settings_node__article' => 'variable.field_bundle_settings_node__article',
+  'variable.node_options_article' => 'variable.node_options_article',
+  'variable.node_preview_article' => 'variable.node_preview_article',
+  'variable.node_submitted_article' => 'variable.node_submitted_article',
 );
 
 $optional = array(

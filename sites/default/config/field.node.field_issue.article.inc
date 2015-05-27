@@ -93,12 +93,9 @@ $data = array(
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'type' => 'entityreference_label',
+        'type' => 'hidden',
         'weight' => '12',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'module' => 'entityreference',
+        'settings' => array(),
       ),
       'teaser' => array(
         'label' => 'above',

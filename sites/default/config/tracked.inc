@@ -3,15 +3,17 @@
 // This file contains the current being tracked configurations.
 
 $tracked = array (
-  'content_type.article' => '7b50192e5de3a078ea99b2300952ed296ac803f8',
+  'content_type.article' => '865cc59d2599485ce2d3804602437bc23e3d1770',
   'content_type.issue' => '1bc263967fc540f629937e62ce59d8f6dfd27883',
   'field.node.body.article' => '8da2a22ee3051c077c3e1bb3e20f6ce7501f1c45',
   'field.node.field_image.article' => '7a48ab18837fe17f6181027c801dcf714bdf1a1a',
   'field.node.field_image.issue' => 'db6e39c67278d9aa8bf82fd4cfc46f903573d158',
-  'field.node.field_issue.article' => 'ca7b5ea44710be1ff618aadac5fd210607bdff0c',
+  'field.node.field_issue.article' => '577312b6d70e7550dfe4554e18fb26a0f3d5d04b',
   'field.node.field_tags.article' => '4c5424b355c4ae3263251b746a19bed937990d40',
   'field.node.field_title_image.article' => 'd88e9264df9baf6d5ea3f1de5a1383eeeb73fc75',
   'field.node.field_title_image.issue' => '0c7d2d7afb1adfec6841ae6025aa85098ea870f7',
+  'image_style.gazzel_logo' => '81799bbe0c0b3999e82307f1fe2356bd9ba51fd4',
+  'image_style.issue_background' => 'f3cb2f43304eea4b4918f965bc2a1cc9470a0351',
   'image_style.issue_title' => '9839820d61af37cbe8a9012914cac7521df4e15a',
   'image_style.large' => 'a3f59d236f134cbb5636e87369dbeb6731ca1dde',
   'image_style.medium' => '3de6edea4dcbba5a8a466d3adb3be605e7048879',
@@ -21,8 +23,11 @@ $tracked = array (
   'variable.default_nodes_main' => 'fb4d19e21fced6d9fc528340e97163839a2c6216',
   'variable.field_bundle_settings_node__article' => 'fc5ea279ba1fbf507bafb49e17c8860b5f6977e3',
   'variable.field_bundle_settings_node__issue' => 'c183c123ba21de65c6663cf384750031ca511b20',
+  'variable.node_options_article' => '3bc767fb506945739ad06561af2d8a6651ac0ea0',
   'variable.node_options_issue' => 'b497dcc35e6128c9faf5f91a4a5c67e11ece2232',
+  'variable.node_preview_article' => '1b042b2554034379ed43608fd71e673729b0a37a',
   'variable.node_preview_issue' => 'ded27c1dde1255d0eb6a62d7a91e0ab7093b7162',
+  'variable.node_submitted_article' => 'dde2f9e8b73771030ebd31f15919967a3b1f95cb',
   'variable.node_submitted_issue' => 'f846ed629e67f04707cff684352a9d83741b38db',
   'variable.site_403' => '6c1800d8c7809119d578ef73e5a701a8471a83f7',
   'variable.site_404' => '2a5ba09e861ed92ee2f730940973c311c748d210',
@@ -42,6 +47,8 @@ $tracked = array (
   'permission.edit_own_article_content' => '84186e883c62f9ff386ed075cf568624cc1e77fc',
   'permission.edit_own_issue_content' => 'ed38a58ebfd0523849470d06a14ada9431021cd8',
   'vocabulary.tags' => '6341dc14c5d2c0030e3a5b5775e6d06463d4ec15',
+  'menu.menu_bottom_menu' => 'ab9d0edb18e2edf94ca7f24f86356c2ee8528d4c',
+  'menu_link.e20b5bfbd847678374f7c42f349ba57a13a13e8d' => '569f6f69de94d9279988bafe8798a0d24965bb72',
   'views_view.issue_view' => '2743fd10579da18e88a6a19ef906b74a375f79b8',
 );
 

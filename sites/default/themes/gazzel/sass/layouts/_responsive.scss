@@ -7,6 +7,12 @@ $zen-column-count: 3;
   max-width: $gazzel-max-width;
 }
 
+.not-front #main {
+  width: $gazzel-article-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .view-id-issue_view {
   @include zen-grid-container;
   text-align: center;

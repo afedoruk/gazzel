@@ -586,6 +586,13 @@ table {
 }
 
 /* line 10, ../sass/layouts/_responsive.scss */
+.not-front #main {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 16, ../sass/layouts/_responsive.scss */
 .view-id-issue_view {
   text-align: center;
 }
@@ -598,7 +605,7 @@ table {
 .view-id-issue_view:after {
   clear: both;
 }
-/* line 14, ../sass/layouts/_responsive.scss */
+/* line 20, ../sass/layouts/_responsive.scss */
 .view-id-issue_view .views-row-1, .view-id-issue_view .views-row-4, .view-id-issue_view .views-row-7 {
   float: left;
   width: 33.33333%;
@@ -613,7 +620,7 @@ table {
   word-wrap: break-word;
   clear: left;
 }
-/* line 18, ../sass/layouts/_responsive.scss */
+/* line 24, ../sass/layouts/_responsive.scss */
 .view-id-issue_view .views-row-2, .view-id-issue_view .views-row-5, .view-id-issue_view .views-row-8 {
   float: left;
   width: 33.33333%;
@@ -627,7 +634,7 @@ table {
   box-sizing: border-box;
   word-wrap: break-word;
 }
-/* line 21, ../sass/layouts/_responsive.scss */
+/* line 27, ../sass/layouts/_responsive.scss */
 .view-id-issue_view .views-row-3, .view-id-issue_view .views-row-6, .view-id-issue_view .views-row-9 {
   float: left;
   width: 33.33333%;
@@ -641,7 +648,7 @@ table {
   box-sizing: border-box;
   word-wrap: break-word;
 }
-/* line 25, ../sass/layouts/_responsive.scss */
+/* line 31, ../sass/layouts/_responsive.scss */
 .view-id-issue_view img {
   width: 250px;
   height: auto;
@@ -1602,6 +1609,7 @@ tr.selected td {
 /* line 14, ../sass/_gazzel.scss */
 #issue-title {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 /* @import "theme-B"; */
