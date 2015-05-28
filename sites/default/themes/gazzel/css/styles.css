@@ -586,7 +586,7 @@ table {
 }
 
 /* line 10, ../sass/layouts/_responsive.scss */
-.not-front #main {
+.node-type-article #main {
   width: 900px;
   margin-left: auto;
   margin-right: auto;
