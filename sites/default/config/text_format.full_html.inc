@@ -37,6 +37,7 @@ $dependencies = array();
 
 $optional = array(
   'permission.use_text_format_full_html' => 'permission.use_text_format_full_html',
+  'wysiwyg.full_html' => 'wysiwyg.full_html',
 );
 
 $modules = array(

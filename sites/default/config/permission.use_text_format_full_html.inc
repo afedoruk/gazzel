@@ -16,6 +16,8 @@ $data = array(
 
 $dependencies = array(
   'text_format.full_html' => 'text_format.full_html',
+  'role.administrator' => 'role.administrator',
+  'role.editor' => 'role.editor',
 );
 
 $optional = array();
