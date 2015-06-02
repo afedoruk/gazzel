@@ -1,0 +1,40 @@
+<?php
+/**
+ * @file
+ * A module for organizing articles in issues
+ */
+
+/**
+ * Implements hook_menu
+ *
+ * $items['latest'] defines a page for a fresh issue
+ */
+
+function magazine_issues_menu() {
+  $items['latest'] = array(
+      'page callback' => 'magazine_issues_latest',
+      'access arguments' => array('view published content')
+    );
+    return $items;
+}
+
+/**
+ * A page for a fresh issue
+ */
+function magazine_issues_latest() {
+   $row = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('status', 1) //Published.
+    ->orderBy('created', 'DESC') //Most recent first.
+    ->range(0, 1)
+    ->execute()
+    ->fetchObject(); 
+  if($row) {
+    $issue=node_load($row->nid);
+    $page=node_view($issue);
+  }
+  else {
+    $page="";
+  }
+  return $page;
+}

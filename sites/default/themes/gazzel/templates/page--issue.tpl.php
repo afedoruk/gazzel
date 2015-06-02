@@ -57,7 +57,7 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php
-      if ($issue_title_image) {
+      if (isset($issue_title_image)) {
         echo "<div id='issue-title'>".theme("image", array("path"=>$issue_title_image))."</div>";
       }
       elseif ($title) {

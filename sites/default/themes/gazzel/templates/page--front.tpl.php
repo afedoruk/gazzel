@@ -8,7 +8,7 @@
  */
 ?>
 
-<div id="page" <?php if($issue_background_image) echo 'style="background: url('.$issue_background_image.')"'?>>
+<div id="page" <?php if(isset($issue_background_image)) echo 'style="background: url('.$issue_background_image.')"'?>>
 
   <header class="header" id="header" role="banner">
 
@@ -57,7 +57,7 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php
-      if ($issue_title_image) {
+      if (isset($issue_title_image)) {
         echo "<div id='issue-title'>".theme("image", array("path"=>$issue_title_image))."</div>";
       }
       elseif ($title) {
