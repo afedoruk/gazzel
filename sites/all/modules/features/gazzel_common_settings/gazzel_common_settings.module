@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Gazzel common settings feature.
+ */
+
+include_once 'gazzel_common_settings.features.inc';

@@ -1,0 +1,9 @@
+name = Gazzel common settings
+core = 7.x
+package = Gazzel
+dependencies[] = features
+dependencies[] = image
+dependencies[] = node
+features[features_api][] = api:2
+features[image][] = gazzel_logo
+features[user_permission][] = access content
