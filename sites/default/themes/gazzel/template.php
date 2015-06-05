@@ -68,7 +68,6 @@ function gazzel_preprocess_page(&$variables, $hook) {
     
   /**  Fresh issue page */
   if(arg(0)=="latest") {
-    print_r($variables['page']['content']['system_main']['#node']->field_title_image);
     if($variables['page']['content']['system_main']['#node']->field_title_image) {
       $issue_title_image=$variables['page']['content']['system_main']['#node']->field_title_image['und'][0]['uri'];
     }
