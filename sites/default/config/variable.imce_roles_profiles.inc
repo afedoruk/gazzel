@@ -9,11 +9,11 @@ $api = '2.0.0';
 $data = array(
   'name' => 'imce_roles_profiles',
   'content' => array(
-    4 => array(
+    200153887 => array(
       'weight' => '0',
       'public_pid' => '2',
     ),
-    3 => array(
+    30037204 => array(
       'weight' => '0',
       'public_pid' => '2',
     ),

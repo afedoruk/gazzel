@@ -28,6 +28,11 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['style_plugin'] = 'default';
 $handler->display->display_options['row_plugin'] = 'node';
 $handler->display->display_options['row_options']['links'] = FALSE;
+/* Relationship: Entity Reference: Referenced Entity */
+$handler->display->display_options['relationships']['field_issue_target_id']['id'] = 'field_issue_target_id';
+$handler->display->display_options['relationships']['field_issue_target_id']['table'] = 'field_data_field_issue';
+$handler->display->display_options['relationships']['field_issue_target_id']['field'] = 'field_issue_target_id';
+$handler->display->display_options['relationships']['field_issue_target_id']['required'] = TRUE;
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -39,15 +44,20 @@ $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FAL
 $handler->display->display_options['sorts']['created']['id'] = 'created';
 $handler->display->display_options['sorts']['created']['table'] = 'node';
 $handler->display->display_options['sorts']['created']['field'] = 'created';
-/* Contextual filter: Content: Выпуск (field_issue) */
-$handler->display->display_options['arguments']['field_issue_target_id']['id'] = 'field_issue_target_id';
-$handler->display->display_options['arguments']['field_issue_target_id']['table'] = 'field_data_field_issue';
-$handler->display->display_options['arguments']['field_issue_target_id']['field'] = 'field_issue_target_id';
-$handler->display->display_options['arguments']['field_issue_target_id']['default_action'] = 'default';
-$handler->display->display_options['arguments']['field_issue_target_id']['default_argument_type'] = 'node';
-$handler->display->display_options['arguments']['field_issue_target_id']['summary']['number_of_records'] = '0';
-$handler->display->display_options['arguments']['field_issue_target_id']['summary']['format'] = 'default_summary';
-$handler->display->display_options['arguments']['field_issue_target_id']['summary_options']['items_per_page'] = '25';
+/* Contextual filter: Content: Nid */
+$handler->display->display_options['arguments']['nid']['id'] = 'nid';
+$handler->display->display_options['arguments']['nid']['table'] = 'node';
+$handler->display->display_options['arguments']['nid']['field'] = 'nid';
+$handler->display->display_options['arguments']['nid']['relationship'] = 'field_issue_target_id';
+$handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['nid']['default_argument_type'] = 'php';
+$handler->display->display_options['arguments']['nid']['default_argument_options']['code'] = 'if( function_exists("magazine_issue_get_nid") )
+{
+return magazine_issue_get_nid();
+}';
+$handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
 /* Filter criterion: Content: Published */
 $handler->display->display_options['filters']['status']['id'] = 'status';
 $handler->display->display_options['filters']['status']['table'] = 'node';

@@ -1,14 +1,14 @@
 <?php
 /**
  * @file
- * variable.user_admin_role.inc
+ * variable.site_frontpage.inc
  */
 
 $api = '2.0.0';
 
 $data = array(
-  'name' => 'user_admin_role',
-  'content' => 30037204,
+  'name' => 'site_frontpage',
+  'content' => 'latest',
 );
 
 $dependencies = array();

@@ -16,6 +16,8 @@ $data = array(
 
 $dependencies = array(
   'content_type.article' => 'content_type.article',
+  'role.administrator' => 'role.administrator',
+  'role.editor' => 'role.editor',
 );
 
 $optional = array();

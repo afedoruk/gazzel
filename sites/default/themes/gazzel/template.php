@@ -51,17 +51,42 @@ function gazzel_preprocess_html(&$variables, $hook) {
  *   An array of variables to pass to the theme template.
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
+ *
+ * @todo Найти более правильный способ получить свойства последней ноды 
  */
 
 function gazzel_preprocess_page(&$variables, $hook) {
+  /** Issue node page */
   if(isset($variables['node']) && $variables['node']->type=='issue') {
     if($variables['node']->field_title_image) {
-      $variables['issue_title_image'] = image_style_url("issue_title", $variables['node']->field_title_image['und'][0]['uri']);
+      $issue_title_image = $variables['node']->field_title_image['und'][0]['uri'];
     }
     if($variables['node']->field_image) {
-      $variables['issue_background_image'] = image_style_url("issue_background", $variables['node']->field_image['und'][0]['uri']);
+      $issue_background_image = $variables['node']->field_image['und'][0]['uri'];
     }
   }
+    
+  /**  Fresh issue page */
+  if(arg(0)=="latest") {
+    print_r($variables['page']['content']['system_main']['#node']->field_title_image);
+    if($variables['page']['content']['system_main']['#node']->field_title_image) {
+      $issue_title_image=$variables['page']['content']['system_main']['#node']->field_title_image['und'][0]['uri'];
+    }
+    if($variables['page']['content']['system_main']['#node']->field_image) {
+      $issue_background_image = $variables['page']['content']['system_main']['#node']->field_image['und'][0]['uri'];
+    }
+    $variables['theme_hook_suggestions'][] = 'page__issue';    
+  }
+  
+  /** Issue properties */
+  if(isset($issue_title_image)) {
+    $variables['issue_title_image'] = image_style_url("issue_title", $issue_title_image);
+  }
+  if(isset($issue_background_image)) {
+      $variables['issue_background_image'] = image_style_url("issue_background", $issue_background_image);
+  }
+  
+  /* Add dedicated template suggestion for node types*/
   if (isset($variables['node']->type)) {
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
   }

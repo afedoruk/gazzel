@@ -25,8 +25,6 @@ $dependencies = array(
 
 $optional = array(
   'field.node.body.article' => 'field.node.body.article',
-  'field.node.field_tags.article' => 'field.node.field_tags.article',
-  'field.node.field_image.article' => 'field.node.field_image.article',
   'field.node.field_title_image.article' => 'field.node.field_title_image.article',
   'field.node.field_issue.article' => 'field.node.field_issue.article',
   'permission.create_article_content' => 'permission.create_article_content',

@@ -22,19 +22,55 @@ function magazine_issues_menu() {
  * A page for a fresh issue
  */
 function magazine_issues_latest() {
-   $row = db_select('node', 'n')
-    ->fields('n', array('nid'))
-    ->condition('status', 1) //Published.
-    ->orderBy('created', 'DESC') //Most recent first.
-    ->range(0, 1)
-    ->execute()
-    ->fetchObject(); 
-  if($row) {
-    $issue=node_load($row->nid);
+  $nid=magazine_issues_get_latest_nid();
+  if($nid) {
+    $issue=node_load($nid);
     $page=node_view($issue);
+    $page['page']=true;
   }
   else {
-    $page="";
+    $page=array();
   }
   return $page;
+}
+
+/**
+ * Gets nid of newest published issue
+ */
+function magazine_issues_get_latest_nid() {
+  static $nid;
+  if(!isset($nid))
+  {
+    $row = db_select('node', 'n')
+     ->fields('n', array('nid'))
+     ->condition('status', 1) //Published.
+     ->orderBy('created', 'DESC') //Most recent first.
+     ->range(0, 1)
+     ->execute()
+     ->fetchObject(); 
+    if($row) {
+      $nid=$row->nid;
+    }
+    else {
+      $nid=0;
+    }
+  }
+  return $nid;
+}
+
+function magazine_issues_node_view($node, $view_mode, $langcode) {
+  if($node->type == "issue" && $view_mode == "full") {
+  //  $articles = db_select
+  }
+}
+
+function magazine_issue_get_nid() {
+  $nid=0;
+  if(arg(0) == "node" && is_numeric(arg(1))) {
+    $nid=arg(1);
+  }
+  elseif(arg(0) == "latest") {
+    $nid=magazine_issues_get_latest_nid();
+  }
+  return $nid;
 }
