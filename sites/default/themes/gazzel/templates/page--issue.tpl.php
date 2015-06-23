@@ -8,7 +8,7 @@
  */
 ?>
 
-<div id="page" <?php if($issue_background_image) echo 'style="background: url('.$issue_background_image.')"'?>>
+<div id="page" <?php if(isset($issue_background_image)) echo 'style="background: url('.$issue_background_image.')"'?>>
 
   <header class="header" id="header" role="banner">
 
